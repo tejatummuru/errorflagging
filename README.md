@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+### Prerequisites
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Before starting, ensure that the following tools are installed on your system:
+- **Node.js**: Download and install Node.js (which includes npm) from [nodejs.org](https://nodejs.org/).
+- **Git**: Install Git from [git-scm.com](https://git-scm.com/).
 
-## Available Scripts
+Optional but recommended:
+- **Yarn**: Install Yarn via npm with `npm install -g yarn`.
 
-In the project directory, you can run:
+### Cloning the Repository
 
-### `npm start`
+1. **Clone the Repository**:
+   Open your terminal and run the following command to clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Setting Up the Backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Navigate to the Server Directory**:
+   If your backend code is in a separate directory, navigate into it:
+   ```bash
+   cd backend  # Adjust this path based on your project structure
+   ```
 
-### `npm test`
+2. **Install Dependencies**:
+   Install necessary Node.js packages:
+   ```bash
+   npm install
+   ```
+   or if using Yarn:
+   ```bash
+   yarn install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Configure Google Earth Engine**:
+   - Place your Google Earth Engine private key (JSON file) in your project. Ensure it’s referenced correctly in your Express application.
+   - Add environment variables as needed (e.g., PORT, GOOGLE_APPLICATION_CREDENTIALS).
 
-### `npm run build`
+4. **Start the Server**:
+   Start the backend server using:
+   ```bash
+   npm start
+   ```
+   or with Yarn:
+   ```bash
+   yarn start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setting Up the Frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Navigate to the Frontend Directory**:
+   If your frontend code is in a separate directory, navigate into it:
+   ```bash
+   cd frontend  # Adjust this path based on your project structure
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+   or with Yarn:
+   ```bash
+   yarn install
+   ```
 
-### `npm run eject`
+3. **Start the Frontend Application**:
+   Run the React application:
+   ```bash
+   npm start
+   ```
+   or with Yarn:
+   ```bash
+   yarn start
+   ```
+   This will open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Testing the Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Functional Test**: Use the application to upload a CSV file and verify that the frontend communicates correctly with the backend, processing data as expected.
+- **Console Logs**: Check both the browser and server console logs for any errors or important messages.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Troubleshooting Common Issues
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Dependency Errors**: If you encounter errors related to missing packages or dependencies, ensure that `npm install` or `yarn install` has been run in both the frontend and backend directories.
+- **CORS Issues**: Make sure the CORS policy on your server is configured to allow requests from your frontend.
+- **Environment Variables**: Check that all necessary environment variables are set correctly for the backend to function, particularly those relating to Google Earth Engine.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Here is the previous code that this project is based on: 
+https://utexas.app.box.com/file/749449409500
+git repo: 
+https://github.com/utkimchi/suspect_calculator/blob/master/Max_Uncertainity_Estimates.py
